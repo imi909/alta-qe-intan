@@ -1,0 +1,657 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 25423552800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Normal Login",
+        "description": "",
+        "id": "login;normal-login",
+        "after": [
+          {
+            "result": {
+              "duration": 719944300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 211881800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User open the web page",
+            "match": {
+              "location": "LoginSteps.verifyLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 296118400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User input \"standard_user\" as userName and \"secret_sauce\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "standard_user",
+                  "offset": 12
+                },
+                {
+                  "val": "secret_sauce",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginSteps.inputCredential(String,String)"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 8674710300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Invalid Login",
+        "description": "",
+        "id": "login;invalid-login;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 672316800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 90302700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User open the web page",
+            "match": {
+              "location": "LoginSteps.verifyLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 216277400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User input \"asd\" as userName and \"secret_sauce\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "asd",
+                  "offset": 12
+                },
+                {
+                  "val": "secret_sauce",
+                  "offset": 34
+                }
+              ],
+              "location": "LoginSteps.inputCredential(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 23082900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User will see \"Epic sadface: Username and password do not match any user in this service\" on login page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Epic sadface: Username and password do not match any user in this service",
+                  "offset": 15
+                }
+              ],
+              "location": "LoginSteps.displayErrorMessage(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Login"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 38228026400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "Invalid Login",
+        "description": "",
+        "id": "login;invalid-login;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 650649400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 51143500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User open the web page",
+            "match": {
+              "location": "LoginSteps.verifyLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 199212600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User input \"standard_user\" as userName and \"123\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "standard_user",
+                  "offset": 12
+                },
+                {
+                  "val": "123",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginSteps.inputCredential(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20671000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User will see \"Epic sadface: Username and password do not match any user in this service\" on login page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Epic sadface: Username and password do not match any user in this service",
+                  "offset": 15
+                }
+              ],
+              "location": "LoginSteps.displayErrorMessage(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Login"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 31290796800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Invalid Login",
+        "description": "",
+        "id": "login;invalid-login;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 727314500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 46502200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User open the web page",
+            "match": {
+              "location": "LoginSteps.verifyLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 210653600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User input \"asd\" as userName and \"asd\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "asd",
+                  "offset": 12
+                },
+                {
+                  "val": "asd",
+                  "offset": 34
+                }
+              ],
+              "location": "LoginSteps.inputCredential(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 22006300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User will see \"Epic sadface: Username and password do not match any user in this service\" on login page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Epic sadface: Username and password do not match any user in this service",
+                  "offset": 15
+                }
+              ],
+              "location": "LoginSteps.displayErrorMessage(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Login"
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "As a user I want to Login to sauce demo",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "features/loginSauce.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Login"
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 14045453900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "User will short item by Name (Z to A)",
+        "description": "",
+        "id": "purchase-flow;user-will-short-item-by-name-(z-to-a)",
+        "after": [
+          {
+            "result": {
+              "duration": 713396200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 30379000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User open the web page",
+            "match": {
+              "location": "LoginSteps.verifyLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 234799400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User input \"standard_user\" as userName and \"secret_sauce\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "standard_user",
+                  "offset": 12
+                },
+                {
+                  "val": "secret_sauce",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginSteps.inputCredential(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3147015900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User sort product list by \"Name (Z to A)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Name (Z to A)",
+                  "offset": 27
+                }
+              ],
+              "location": "PurchaseSteps.selectProductCart(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3213739900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User click add to chart on the chosen item",
+            "match": {
+              "location": "PurchaseSteps.selectItem()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3061000100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User click the shopping cart",
+            "match": {
+              "location": "PurchaseSteps.shoppingCart()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3078523200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User click remove button on the chosen item",
+            "match": {
+              "location": "PurchaseSteps.removeChart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3052314800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User click checkout button",
+            "match": {
+              "location": "PurchaseSteps.buttonCheckout()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3165371800,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User input \"imi\" as firstName and \"imi\" as lastName and \"9099\" as postalCode",
+            "match": {
+              "arguments": [
+                {
+                  "val": "imi",
+                  "offset": 12
+                },
+                {
+                  "val": "imi",
+                  "offset": 35
+                },
+                {
+                  "val": "9099",
+                  "offset": 57
+                }
+              ],
+              "location": "PurchaseSteps.inputCredential(String,String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3059931700,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "User click continue button",
+            "match": {
+              "location": "PurchaseSteps.buttonContinue()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3039243300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User should get \"Item total: $89.96\" as expected item total",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Item total: $89.96",
+                  "offset": 17
+                }
+              ],
+              "location": "PurchaseSteps.subTotal(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3025008200,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "User should get \"Tax: $7.20\" as expected tax",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Tax: $7.20",
+                  "offset": 17
+                }
+              ],
+              "location": "PurchaseSteps.taxLabel(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3045377300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User should get \"Total: $97.16\" as expected total",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Total: $97.16",
+                  "offset": 17
+                }
+              ],
+              "location": "PurchaseSteps.totalLabel(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3046951600,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "User click finish button",
+            "match": {
+              "location": "PurchaseSteps.buttonFinish()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3028035400,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "User should get \"THANK YOU FOR YOUR ORDER\" as expected succes order",
+            "match": {
+              "arguments": [
+                {
+                  "val": "THANK YOU FOR YOUR ORDER",
+                  "offset": 17
+                }
+              ],
+              "location": "PurchaseSteps.headerComplete(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3046836800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "User click back home button",
+            "match": {
+              "location": "PurchaseSteps.buttonBackHome()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Purchase Flow",
+    "description": "As user want to purchase item",
+    "id": "purchase-flow",
+    "keyword": "Feature",
+    "uri": "features/purchaseFlow.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@PurchaseFlow"
+      }
+    ]
+  }
+]
